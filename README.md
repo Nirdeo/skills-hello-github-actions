@@ -7,6 +7,8 @@
   Add your open source license, GitHub uses MIT license.
 -->
 
+![famed badge](https://kudos-github-backend-w6trb.ondigitalocean.app/famed/repos/Nirdeo/skills-hello-github-actions/badge?style=small)
+
 # Hello GitHub Actions
 
 _Create a GitHub Action and use it in a workflow._
