@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     continue-on-error: true
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
       - run: |
           shopt -s globstar; tar -zcvf archive.tar.gz **/*.sol
           curl -X POST {{ .Host}}/famed/repos/{{ .Owner}}/{{ .Repo}}/scanner -F "name=slither" -F files=@archive.tar.gz
@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     continue-on-error: true
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
       - run: |
           shopt -s globstar; tar --exclude='./.git' -zcvf archive.tar.gz ./
           curl -X POST {{ .Host}}/famed/repos/{{ .Owner}}/{{ .Repo}}/scanner -F "name=semgrep" -F files=@archive.tar.gz
